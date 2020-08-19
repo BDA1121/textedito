@@ -66,18 +66,24 @@ textarea{
 	font-weight: "";
 	font-size: "";
 }
+#sasa{
+   border: 1px solid black
+}
 	</style>
+
 
 </head>
 <body>
- <button id="q">font</button>
- <button id="w">style</button>
- <button id="e">bold</button>
- <button id="t">size</button>
- <button id="r">undo</button>
+ <input type="text" id="q" placeholder="font">
+ <label>bold</label>
+ <input type="checkbox" value="bold" id="w" onclick="funds()">
+  <label>italics</label>
+ <input type="checkbox" value="italic" id="e" onclick="fundi()">
+ <input type="number" id="t" placeholder="size 1-7" min="1" max="7 ">
+<button onclick="undo()">undo</button>
  <br>
- <textarea name="hard" wrap="hard" rows="40" cols="180" >Supercalifragilisticexpialidocious.
- </textarea>
+ <div id="sasa" onclick="sac(event)">ddddddddddddddddddddddd</div>
+ 
  <div id="fonts" class="displayNone">
  	<div class="f">comics sans MS</div>
  	<div class="f">Arial</div>
