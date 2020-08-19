@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Texxt Editor</title>
+	<style type="text/css">
+	#fonts{
+		max-width: 150px;
+		background:#d9dddc;
+		position: fixed;
+		top:30px;
+	}
+	#bold{
+		max-width: 150px;
+		background:#d9dddc;
+		position: fixed;
+		top:30px;
+		left:20px;
+	}
+	#style{
+		max-width: 150px;
+		background:#d9dddc;
+		position: fixed;
+		top:30px;
+		left:20px;
+	}
+	#size{
+		max-width: 150px;
+		background:#d9dddc;
+		position: fixed;
+		top:30px;
+		left:20px;
+	}
+	.f{
+
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.f:hover{
+		box-shadow: 2px 2px 2px black
+	}
+	.b{
+
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.b:hover{
+		box-shadow: 2px 2px 2px black
+	}
+	.s{
+
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.s:hover{
+		box-shadow: 2px 2px 2px black
+	}
+	.display{
+	display:visible;
+}
+.displayNone{
+	display:none;
+}
+textarea{
+	font-family: "";
+	font-style: "";
+	font-weight: "";
+	font-size: "";
+}
+	</style>
+
+</head>
+<body>
+ <button id="q">font</button>
+ <button id="w">style</button>
+ <button id="e">bold</button>
+ <button id="t">size</button>
+ <button id="r">undo</button>
+ <br>
+ <textarea name="hard" wrap="hard" rows="40" cols="180" >Supercalifragilisticexpialidocious.
+ </textarea>
+ <div id="fonts" class="displayNone">
+ 	<div class="f">comics sans MS</div>
+ 	<div class="f">Arial</div>
+ 	<div class="f">Helvetica</div>
+ 	<div class="f">Courier New</div>
+ 	<div class="f">Verdana</div>
+    <div class="f">Candara</div>
+ 	<div class="f">Calibri</div>
+    <div class="f">Cambria</div>
+
+ </div>
+  <div id="bold" class="displayNone">
+ 	<div class="b">bold</div>
+ 	<div class="b">normal</div>
+ 	<div class="b">bolder</div>
+ 	<div class="b">lighter</div>
+    
+ </div>
+ <div id="style" class="displayNone">
+ 	<div class="s">normal</div>
+ 	<div class="s">italic</div>
+ 	<div class="s">oblique</div>
+    
+ </div>
+  <div id="size" class="displayNone">
+ 	<input type="number" name="number" id="number" onchange="sizef(this.value)">
+ </div>
+<script type="text/javascript" src="textEditor.js"></script>
+</body>
+</html>
