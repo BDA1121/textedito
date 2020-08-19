@@ -9,59 +9,47 @@ var b = document.querySelectorAll(".b");
 var s = document.querySelectorAll(".s");
 var fonts = document.getElementById("fonts");
 var bold = document.getElementById("bold");
+document.designMode = "on";
+var xs = 0, as = 0;
+function funds(){
+   xs = 1;
+}
+function fundi(){
+   as = 1;
+}
+function undo(){
+	document.execCommand("undo");
+}
+function sac(event){
+	z = q.value;
+	x = w.value;
+	c = t.value;
+	v = e.value
+	document.execCommand("fontName",true,q.value);
+	if(xs === 1){
+		if(!document.getElementById("w").checked){
+			xs = 0;
+		}
+		document.execCommand(w.value);
+	};
+	if(as === 1){
+		if(!document.getElementById("e").checked){
+			as = 0;
+		}
+     document.execCommand(e.value);
 
+	}
+	
+	document.execCommand("fontSize",true,document.getElementById("t").value );
+}
 var size = document.getElementById("size");
 var style = document.getElementById("style");
  fonts.classList.add("displayNone");
   bold.classList.add("displayNone");
   style.classList.add("displayNone");
   size.classList.add("displayNone");
-q.addEventListener("click",function(){
-	fonts.classList.toggle("display");
-	fonts.classList.toggle("displayNone");
-bold.classList.add("displayNone");
-	style.classList.add("displayNone");
-  size.classList.add("displayNone");
-})
-e.addEventListener("click",function(){
-	bold.classList.toggle("display");
-	bold.classList.toggle("displayNone");
-	 fonts.classList.add("displayNone");
-	 style.classList.add("displayNone");
-  size.classList.add("displayNone");
-})
-t.addEventListener("click",function(){
-	size.classList.toggle("display");
-	size.classList.toggle("displayNone");
-  bold.classList.add("displayNone");
 
-	 fonts.classList.add("displayNone");
-	 style.classList.add("displayNone");
-})
-w.addEventListener("click",function(){
-	style.classList.toggle("display");
-	style.classList.toggle("displayNone");
-	 fonts.classList.add("displayNone");
-  size.classList.add("displayNone");
-	 bold.classList.add("displayNone");
-})
-r.addEventListener("click",function(){
-	 fonts.classList.add("displayNone");
-	 bold.classList.add("displayNone");
-	 style.classList.add("displayNone");
-     if(document.querySelector("textarea").style.fontFamily !== z){
-     	document.querySelector("textarea").style.fontFamily = z;
-     }
-     if(document.querySelector("textarea").style.fontWeight !== x){
-     	document.querySelector("textarea").style.fontWeight = x;
-     }
-     if(document.querySelector("textarea").style.fontStyle !== c){
-        document.querySelector("textarea").style.fontStyle = c;
-     }
-     if(document.querySelector("textarea").style.fontSize !== v){
-     	document.querySelector("textarea").style.fontSize = v;
-     }
-})
+
 
 function sizef(value){
 	v = document.querySelector("textarea").style.fontSize;
